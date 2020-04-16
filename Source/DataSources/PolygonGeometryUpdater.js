@@ -76,7 +76,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         PolygonGeometryUpdater.prototype = Object.create(GroundGeometryUpdater.prototype);
-        PolygonGeometryUpdater.prototype.constructor = PolygonGeometryUpdater;
     }
 
     /**
@@ -300,7 +299,18 @@ import Property from './Property.js';
         return !options.perPositionHeight && (!isExtruded && height === 0 || (isExtruded && options.closeTop && options.closeBottom));
     };
 
-    PolygonGeometryUpdater.DynamicGeometryUpdater = DyanmicPolygonGeometryUpdater;
+    PolygonGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new DyanmicPolygonGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -311,7 +321,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DyanmicPolygonGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DyanmicPolygonGeometryUpdater.prototype.constructor = DyanmicPolygonGeometryUpdater;
     }
 
     DyanmicPolygonGeometryUpdater.prototype._isHidden = function(entity, polygon, time) {

@@ -62,7 +62,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         CorridorGeometryUpdater.prototype = Object.create(GroundGeometryUpdater.prototype);
-        CorridorGeometryUpdater.prototype.constructor = CorridorGeometryUpdater;
     }
 
     /**
@@ -203,7 +202,18 @@ import Property from './Property.js';
         options.extrudedHeight = extrudedHeightValue;
     };
 
-    CorridorGeometryUpdater.DynamicGeometryUpdater = DynamicCorridorGeometryUpdater;
+    CorridorGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new  DynamicCorridorGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -214,7 +224,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicCorridorGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicCorridorGeometryUpdater.prototype.constructor = DynamicCorridorGeometryUpdater;
     }
 
     DynamicCorridorGeometryUpdater.prototype._isHidden = function(entity, corridor, time) {

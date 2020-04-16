@@ -73,7 +73,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         EllipsoidGeometryUpdater.prototype = Object.create(GeometryUpdater.prototype);
-        EllipsoidGeometryUpdater.prototype.constructor = EllipsoidGeometryUpdater;
     }
 
     Object.defineProperties(EllipsoidGeometryUpdater.prototype, {
@@ -223,7 +222,18 @@ import Property from './Property.js';
 
     EllipsoidGeometryUpdater.prototype._onEntityPropertyChanged = heightReferenceOnEntityPropertyChanged;
 
-    EllipsoidGeometryUpdater.DynamicGeometryUpdater = DynamicEllipsoidGeometryUpdater;
+    EllipsoidGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new DynamicEllipsoidGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -246,7 +256,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicEllipsoidGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicEllipsoidGeometryUpdater.prototype.constructor = DynamicEllipsoidGeometryUpdater;
     }
 
     DynamicEllipsoidGeometryUpdater.prototype.update = function(time) {

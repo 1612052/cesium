@@ -50,7 +50,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         WallGeometryUpdater.prototype = Object.create(GeometryUpdater.prototype);
-        WallGeometryUpdater.prototype.constructor = WallGeometryUpdater;
     }
 
     /**
@@ -170,7 +169,17 @@ import Property from './Property.js';
         options.granularity = defined(granularity) ? granularity.getValue(Iso8601.MINIMUM_VALUE) : undefined;
     };
 
-    WallGeometryUpdater.DynamicGeometryUpdater = DynamicWallGeometryUpdater;
+    WallGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+        return new DynamicWallGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -181,7 +190,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicWallGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicWallGeometryUpdater.prototype.constructor = DynamicWallGeometryUpdater;
     }
 
     DynamicWallGeometryUpdater.prototype._isHidden = function(entity, wall, time) {

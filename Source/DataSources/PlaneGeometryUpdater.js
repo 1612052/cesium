@@ -55,7 +55,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         PlaneGeometryUpdater.prototype = Object.create(GeometryUpdater.prototype);
-        PlaneGeometryUpdater.prototype.constructor = PlaneGeometryUpdater;
     }
 
     /**
@@ -194,7 +193,17 @@ import Property from './Property.js';
         options.dimensions = plane.dimensions.getValue(Iso8601.MINIMUM_VALUE, options.dimensions);
     };
 
-    PlaneGeometryUpdater.DynamicGeometryUpdater = DynamicPlaneGeometryUpdater;
+    PlaneGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+        return new DynamicPlaneGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -205,7 +214,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicPlaneGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicPlaneGeometryUpdater.prototype.constructor = DynamicPlaneGeometryUpdater;
     }
 
     DynamicPlaneGeometryUpdater.prototype._isHidden = function(entity, plane, time) {

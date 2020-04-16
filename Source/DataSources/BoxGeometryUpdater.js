@@ -57,7 +57,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         BoxGeometryUpdater.prototype = Object.create(GeometryUpdater.prototype);
-        BoxGeometryUpdater.prototype.constructor = BoxGeometryUpdater;
     }
 
     Object.defineProperties(BoxGeometryUpdater.prototype, {
@@ -189,7 +188,17 @@ import Property from './Property.js';
 
     BoxGeometryUpdater.prototype._onEntityPropertyChanged = heightReferenceOnEntityPropertyChanged;
 
-    BoxGeometryUpdater.DynamicGeometryUpdater = DynamicBoxGeometryUpdater;
+    BoxGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+        return new DynamicBoxGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -200,7 +209,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicBoxGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicBoxGeometryUpdater.prototype.constructor = DynamicBoxGeometryUpdater;
     }
 
     DynamicBoxGeometryUpdater.prototype._isHidden = function(entity, box, time) {

@@ -50,7 +50,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         PolylineVolumeGeometryUpdater.prototype = Object.create(GeometryUpdater.prototype);
-        PolylineVolumeGeometryUpdater.prototype.constructor = PolylineVolumeGeometryUpdater;
     }
 
     /**
@@ -165,7 +164,18 @@ import Property from './Property.js';
         options.cornerType = defined(cornerType) ? cornerType.getValue(Iso8601.MINIMUM_VALUE) : undefined;
     };
 
-    PolylineVolumeGeometryUpdater.DynamicGeometryUpdater = DynamicPolylineVolumeGeometryUpdater;
+    PolylineVolumeGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new DynamicPolylineVolumeGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -176,7 +186,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicPolylineVolumeGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicPolylineVolumeGeometryUpdater.prototype.constructor = DynamicPolylineVolumeGeometryUpdater;
     }
 
     DynamicPolylineVolumeGeometryUpdater.prototype._isHidden = function(entity, polylineVolume, time) {

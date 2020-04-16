@@ -61,7 +61,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         CylinderGeometryUpdater.prototype = Object.create(GeometryUpdater.prototype);
-        CylinderGeometryUpdater.prototype.constructor = CylinderGeometryUpdater;
     }
 
     Object.defineProperties(CylinderGeometryUpdater.prototype, {
@@ -204,7 +203,18 @@ import Property from './Property.js';
 
     CylinderGeometryUpdater.prototype._onEntityPropertyChanged = heightReferenceOnEntityPropertyChanged;
 
-    CylinderGeometryUpdater.DynamicGeometryUpdater = DynamicCylinderGeometryUpdater;
+    CylinderGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new  DynamicCylinderGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -215,7 +225,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicCylinderGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicCylinderGeometryUpdater.prototype.constructor = DynamicCylinderGeometryUpdater;
     }
 
     DynamicCylinderGeometryUpdater.prototype._isHidden = function(entity, cylinder, time) {

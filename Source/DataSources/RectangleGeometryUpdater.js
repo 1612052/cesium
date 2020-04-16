@@ -66,7 +66,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         RectangleGeometryUpdater.prototype = Object.create(GroundGeometryUpdater.prototype);
-        RectangleGeometryUpdater.prototype.constructor = RectangleGeometryUpdater;
     }
 
     /**
@@ -210,7 +209,18 @@ import Property from './Property.js';
         options.extrudedHeight = extrudedHeightValue;
     };
 
-    RectangleGeometryUpdater.DynamicGeometryUpdater = DynamicRectangleGeometryUpdater;
+    RectangleGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new DynamicRectangleGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -221,7 +231,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicRectangleGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicRectangleGeometryUpdater.prototype.constructor = DynamicRectangleGeometryUpdater;
     }
 
     DynamicRectangleGeometryUpdater.prototype._isHidden = function(entity, rectangle, time) {

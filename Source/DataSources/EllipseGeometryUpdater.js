@@ -65,7 +65,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         EllipseGeometryUpdater.prototype = Object.create(GroundGeometryUpdater.prototype);
-        EllipseGeometryUpdater.prototype.constructor = EllipseGeometryUpdater;
     }
 
     /**
@@ -211,7 +210,18 @@ import Property from './Property.js';
         options.extrudedHeight = extrudedHeightValue;
     };
 
-    EllipseGeometryUpdater.DynamicGeometryUpdater = DynamicEllipseGeometryUpdater;
+    EllipseGeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives){
+        //>>includeStart('debug', pragmas.debug);
+        Check.defined('primitives', primitives);
+        Check.defined('groundPrimitives', groundPrimitives);
+
+        if (!this._dynamic) {
+            throw new DeveloperError('This instance does not represent dynamic geometry.');
+        }
+        //>>includeEnd('debug');
+
+        return new DynamicEllipseGeometryUpdater(this, primitives, groundPrimitives);
+    };
 
     /**
      * @private
@@ -222,7 +232,6 @@ import Property from './Property.js';
 
     if (defined(Object.create)) {
         DynamicEllipseGeometryUpdater.prototype = Object.create(DynamicGeometryUpdater.prototype);
-        DynamicEllipseGeometryUpdater.prototype.constructor = DynamicEllipseGeometryUpdater;
     }
 
     DynamicEllipseGeometryUpdater.prototype._isHidden = function(entity, ellipse, time) {

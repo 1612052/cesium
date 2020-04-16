@@ -479,16 +479,6 @@ import Property from './Property.js';
      *
      * @exception {DeveloperError} This instance does not represent dynamic geometry.
      */
-    GeometryUpdater.prototype.createDynamicUpdater = function(primitives, groundPrimitives) {
-        //>>includeStart('debug', pragmas.debug);
-        Check.defined('primitives', primitives);
-        Check.defined('groundPrimitives', groundPrimitives);
+    GeometryUpdater.prototype.createDynamicUpdater = DeveloperError.throwInstantiationError;
 
-        if (!this._dynamic) {
-            throw new DeveloperError('This instance does not represent dynamic geometry.');
-        }
-        //>>includeEnd('debug');
-
-        return new this.constructor.DynamicGeometryUpdater(this, primitives, groundPrimitives);
-    };
 export default GeometryUpdater;

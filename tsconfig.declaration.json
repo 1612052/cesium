@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "Build/TypeScript",
+        "allowJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true
+    },
+    "include": [
+        "Source/Cesium.js"
+    ]
+}

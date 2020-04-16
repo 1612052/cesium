@@ -2067,7 +2067,7 @@ import TrustedServers from './TrustedServers.js';
 
     /**
      * A function that returns the value of the property.
-     * @callback Resource~RetryCallback
+     * @callback Resource.RetryCallback
      *
      * @param {Resource} [resource] The resource that failed to load.
      * @param {Error} [error] The error that occurred during the loading of the resource.

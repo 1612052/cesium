@@ -108,7 +108,7 @@ import TimeConstants from './TimeConstants.js';
         /**
          * Computes a 4x4 transformation matrix from a reference frame
          * centered at the provided origin to the provided ellipsoid's fixed reference frame.
-         * @callback Transforms~LocalFrameToFixedFrame
+         * @callback Transforms.LocalFrameToFixedFrame
          * @param {Cartesian3} origin The center point of the local reference frame.
          * @param {Ellipsoid} [ellipsoid=Ellipsoid.WGS84] The ellipsoid whose fixed frame is used in the transformation.
          * @param {Matrix4} [result] The object onto which to store the result.

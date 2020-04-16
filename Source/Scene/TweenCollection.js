@@ -532,16 +532,16 @@ import TweenJS from '../ThirdParty/Tween.js';
 
     /**
      * A function that will execute when a tween completes.
-     * @callback TweenCollection~TweenCompleteCallback
+     * @callback TweenCollection.TweenCompleteCallback
      */
 
     /**
      * A function that will execute when a tween updates.
-     * @callback TweenCollection~TweenUpdateCallback
+     * @callback TweenCollection.TweenUpdateCallback
      */
 
     /**
      * A function that will execute when a tween is cancelled.
-     * @callback TweenCollection~TweenCancelledCallback
+     * @callback TweenCollection.TweenCancelledCallback
      */
 export default TweenCollection;

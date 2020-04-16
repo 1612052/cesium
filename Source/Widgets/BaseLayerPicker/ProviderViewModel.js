@@ -98,7 +98,7 @@ import createCommand from '../createCommand.js';
 
     /**
      * A function which creates one or more providers.
-     * @callback ProviderViewModel~CreationFunction
+     * @callback ProviderViewModel.CreationFunction
      * @returns {ImageryProvider|TerrainProvider|ImageryProvider[]|TerrainProvider[]}
      *          The ImageryProvider or TerrainProvider, or array of providers, to be added
      *          to the globe.

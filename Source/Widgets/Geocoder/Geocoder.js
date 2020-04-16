@@ -211,7 +211,7 @@ css: { active: $data === $parent._selectedSuggestion }');
 
     /**
      * A function that handles the result of a successful geocode.
-     * @callback Geocoder~DestinationFoundFunction
+     * @callback Geocoder.DestinationFoundFunction
      * @param {GeocoderViewModel} viewModel The view model.
      * @param {Cartesian3|Rectangle} destination The destination result of the geocode.
      */

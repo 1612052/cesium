@@ -798,7 +798,7 @@ import kdbush from '../ThirdParty/kdbush.js';
 
     /**
      * A event listener function used to style clusters.
-     * @callback EntityCluster~newClusterCallback
+     * @callback EntityCluster.newClusterCallback
      *
      * @param {Entity[]} clusteredEntities An array of the entities contained in the cluster.
      * @param {Object} cluster An object containing billboard, label, and point properties. The values are the same as

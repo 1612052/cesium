@@ -412,6 +412,6 @@ import SceneMode from './SceneMode.js';
     /**
      * A function that will be called at the end of the frame.
      *
-     * @callback FrameState~AfterRenderCallback
+     * @callback FrameState.AfterRenderCallback
      */
 export default FrameState;

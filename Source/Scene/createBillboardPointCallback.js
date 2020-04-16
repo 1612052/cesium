@@ -52,7 +52,7 @@
 
     /**
      * A function that returns a canvas containing an image of a point.
-     * @callback createBillboardPointCallback~CanvasFunction
+     * @callback createBillboardPointCallback.CanvasFunction
      * @returns {HTMLCanvasElement} The result of the calculation.
      */
 export default createBillboardPointCallback;

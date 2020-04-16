@@ -40,7 +40,7 @@ import defined from '../Core/defined.js';
     /**
      * A function which will be called when playback ends.
      *
-     * @callback KmlTourWait~DoneCallback
+     * @callback KmlTourWait.DoneCallback
      * @param {Boolean} terminated true if {@link KmlTourWait#stop} was
      * called before entry done playback.
      */

@@ -157,6 +157,6 @@ import defined from './defined.js';
 
     /**
      * A function that removes a listener.
-     * @callback Event~RemoveCallback
+     * @callback Event.RemoveCallback
      */
 export default Event;

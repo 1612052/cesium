@@ -51,7 +51,7 @@ import Check from './Check.js';
 
     /**
      * A function used to compare two items while performing a binary search.
-     * @callback binarySearch~Comparator
+     * @callback binarySearch.Comparator
      *
      * @param {*} a An item in the array.
      * @param {*} b The item being searched for.

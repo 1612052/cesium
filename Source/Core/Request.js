@@ -176,18 +176,18 @@ import RequestType from './RequestType.js';
 
     /**
      * The function that makes the actual data request.
-     * @callback Request~RequestCallback
+     * @callback Request.RequestCallback
      * @returns {Promise} A promise for the requested data.
      */
 
     /**
      * The function that is called when the request is cancelled.
-     * @callback Request~CancelCallback
+     * @callback Request.CancelCallback
      */
 
     /**
      * The function that is called to update the request's priority, which occurs once per frame.
-     * @callback Request~PriorityCallback
+     * @callback Request.PriorityCallback
      * @returns {Number} The updated priority value.
      */
 export default Request;

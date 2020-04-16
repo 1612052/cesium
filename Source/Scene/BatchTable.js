@@ -549,7 +549,7 @@ import Texture from '../Renderer/Texture.js';
 
     /**
      * A callback for updating uniform maps.
-     * @callback BatchTable~updateUniformMapCallback
+     * @callback BatchTable.updateUniformMapCallback
      *
      * @param {Object} uniformMap The uniform map.
      * @returns {Object} The new uniform map with properties for retrieving values from the batch table.
@@ -557,7 +557,7 @@ import Texture from '../Renderer/Texture.js';
 
     /**
      * A callback for updating a vertex shader source.
-     * @callback BatchTable~updateVertexShaderSourceCallback
+     * @callback BatchTable.updateVertexShaderSourceCallback
      *
      * @param {String} vertexShaderSource The vertex shader source.
      * @returns {String} The new vertex shader source with the functions for retrieving batch table values injected.

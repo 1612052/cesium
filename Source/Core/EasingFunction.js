@@ -239,7 +239,7 @@ import Tween from '../ThirdParty/Tween.js';
 
     /**
      * Function interface for implementing a custom easing function.
-     * @callback EasingFunction~Callback
+     * @callback EasingFunction.Callback
      * @param {Number} time The time in the range <code>[0, 1]</code>.
      * @returns {Number} The value of the function at the given time.
      *

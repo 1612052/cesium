@@ -144,6 +144,6 @@ import formatError from './formatError.js';
 
     /**
      * A function that will be called to retry the operation.
-     * @callback TileProviderError~RetryFunction
+     * @callback TileProviderError.RetryFunction
      */
 export default TileProviderError;

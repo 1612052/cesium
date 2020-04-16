@@ -2057,7 +2057,7 @@ Either specify options.terrainProvider instead or set options.baseLayerPicker to
 
     /**
      * A function that augments a Viewer instance with additional functionality.
-     * @callback Viewer~ViewerMixin
+     * @callback Viewer.ViewerMixin
      * @param {Viewer} viewer The viewer instance.
      * @param {Object} options Options object to be passed to the mixin function.
      *

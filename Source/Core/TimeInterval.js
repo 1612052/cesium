@@ -380,7 +380,7 @@ import JulianDate from './JulianDate.js';
 
     /**
      * Function interface for merging interval data.
-     * @callback TimeInterval~MergeCallback
+     * @callback TimeInterval.MergeCallback
      *
      * @param {*} leftData The first data instance.
      * @param {*} rightData The second data instance.
@@ -389,7 +389,7 @@ import JulianDate from './JulianDate.js';
 
     /**
      * Function interface for comparing interval data.
-     * @callback TimeInterval~DataComparer
+     * @callback TimeInterval.DataComparer
      * @param {*} leftData The first data instance.
      * @param {*} rightData The second data instance.
      * @returns {Boolean} <code>true</code> if the provided instances are equal, <code>false</code> otherwise.

@@ -1394,7 +1394,7 @@ import VerticalOrigin from './VerticalOrigin.js';
 
     /**
      * A function that creates an image.
-     * @callback Billboard~CreateImageCallback
+     * @callback Billboard.CreateImageCallback
      * @param {String} id The identifier of the image to load.
      * @returns {Image|Canvas|Promise<Image|Canvas>} The image, or a promise that will resolve to an image.
      */

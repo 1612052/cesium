@@ -789,7 +789,7 @@ import Particle from './Particle.js';
      * A function used to modify attributes of the particle at each time step. This can include force modifications,
      * color, sizing, etc.
      *
-     * @callback ParticleSystem~updateCallback
+     * @callback ParticleSystem.updateCallback
      *
      * @param {Particle} particle The particle being updated.
      * @param {Number} dt The time in seconds since the last update.

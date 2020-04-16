@@ -2347,7 +2347,7 @@ import TileOrientedBoundingBox from './TileOrientedBoundingBox.js';
      * Optimization option. Used as a callback when {@link Cesium3DTileset#foveatedScreenSpaceError} is true to control how much to raise the screen space error for tiles outside the foveated cone,
      * interpolating between {@link Cesium3DTileset#foveatedMinimumScreenSpaceErrorRelaxation} and {@link Cesium3DTileset#maximumScreenSpaceError}.
      *
-     * @callback Cesium3DTileset~foveatedInterpolationCallback
+     * @callback Cesium3DTileset.foveatedInterpolationCallback
      * @default Math.lerp
      *
      * @param {Number} p The start value to interpolate.

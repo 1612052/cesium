@@ -3213,11 +3213,11 @@ import SceneMode from './SceneMode.js';
 
     /**
      * A function that will execute when a flight completes.
-     * @callback Camera~FlightCompleteCallback
+     * @callback Camera.FlightCompleteCallback
      */
 
     /**
      * A function that will execute when a flight is cancelled.
-     * @callback Camera~FlightCancelledCallback
+     * @callback Camera.FlightCancelledCallback
      */
 export default Camera;

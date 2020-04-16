@@ -558,7 +558,7 @@ import ToggleButtonViewModel from '../ToggleButtonViewModel.js';
 
     /**
      * A function that formats a date for display.
-     * @callback AnimationViewModel~DateFormatter
+     * @callback AnimationViewModel.DateFormatter
      *
      * @param {JulianDate} date The date to be formatted
      * @param {AnimationViewModel} viewModel The AnimationViewModel instance requesting formatting.
@@ -567,7 +567,7 @@ import ToggleButtonViewModel from '../ToggleButtonViewModel.js';
 
     /**
      * A function that formats a time for display.
-     * @callback AnimationViewModel~TimeFormatter
+     * @callback AnimationViewModel.TimeFormatter
      *
      * @param {JulianDate} date The date to be formatted
      * @param {AnimationViewModel} viewModel The AnimationViewModel instance requesting formatting.

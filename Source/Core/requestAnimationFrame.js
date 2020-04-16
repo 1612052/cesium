@@ -67,7 +67,7 @@ import getTimestamp from './getTimestamp.js';
 
     /**
      * A function that will be called when the next frame should be drawn.
-     * @callback requestAnimationFrame~Callback
+     * @callback requestAnimationFrame.Callback
      *
      * @param {Number} timestamp A timestamp for the frame, in milliseconds.
      */

@@ -97,7 +97,7 @@ import EasingFunction from '../Core/EasingFunction.js';
 
     /**
      * A function that will be executed when the flight completes.
-     * @callback KmlTourFlyTo~DoneCallback
+     * @callback KmlTourFlyTo.DoneCallback
      *
      * @param {Boolean} terminated true if {@link KmlTourFlyTo#stop} was
      * called before entry done playback.

@@ -69,6 +69,6 @@ import DeveloperError from './DeveloperError.js';
 
     /**
      * A function that removes a listener.
-     * @callback EventHelper~RemoveCallback
+     * @callback EventHelper.RemoveCallback
      */
 export default EventHelper;

@@ -1254,7 +1254,7 @@ import ScaledPositionProperty from './ScaledPositionProperty.js';
          * It can also be used to add additional files to the <code>externalFiles</code> object, which is the list of files embedded in the exported KMZ,
          * or otherwise returned with the KML string when exporting.
          *
-         * @callback exportKml~ModelCallback
+         * @callback exportKml.ModelCallback
          *
          * @param {ModelGraphics} model The ModelGraphics instance for an Entity.
          * @param {JulianDate} time The time that any properties should use to get the value.

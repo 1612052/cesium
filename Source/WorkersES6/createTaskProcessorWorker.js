@@ -95,7 +95,7 @@ import when from '../ThirdParty/when.js';
 
     /**
      * A function that performs a calculation in a Web Worker.
-     * @callback createTaskProcessorWorker~WorkerFunction
+     * @callback createTaskProcessorWorker.WorkerFunction
      *
      * @param {Object} parameters Parameters to the calculation.
      * @param {Array} transferableObjects An array that should be filled with references to objects inside
@@ -119,7 +119,7 @@ import when from '../ThirdParty/when.js';
     /**
      * A Web Worker message event handler function that handles the interaction with TaskProcessor,
      * specifically, task ID management and posting a response message containing the result.
-     * @callback createTaskProcessorWorker~TaskProcessorWorkerFunction
+     * @callback createTaskProcessorWorker.TaskProcessorWorkerFunction
      *
      * @param {Object} event The onmessage event object.
      */

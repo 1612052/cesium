@@ -918,7 +918,7 @@ import PolylineGraphics from './PolylineGraphics.js';
 
     /**
      * This callback is displayed as part of the GeoJsonDataSource class.
-     * @callback GeoJsonDataSource~describe
+     * @callback GeoJsonDataSource.describe
      * @param {Object} properties The properties of the feature.
      * @param {String} nameProperty The property key that Cesium estimates to have the name of the feature.
      */

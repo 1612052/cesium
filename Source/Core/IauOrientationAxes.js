@@ -90,7 +90,7 @@ import Quaternion from './Quaternion.js';
 
     /**
      * A function that computes the {@link IauOrientationParameters} for a {@link JulianDate}.
-     * @callback IauOrientationAxes~ComputeFunction
+     * @callback IauOrientationAxes.ComputeFunction
      * @param {JulianDate} date The date to evaluate the parameters.
      * @returns {IauOrientationParameters} The orientation parameters.
      */

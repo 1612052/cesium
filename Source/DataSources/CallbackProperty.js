@@ -96,7 +96,7 @@ import Event from '../Core/Event.js';
 
     /**
      * A function that returns the value of the property.
-     * @callback CallbackProperty~Callback
+     * @callback CallbackProperty.Callback
      *
      * @param {JulianDate} [time] The time for which to retrieve the value.
      * @param {Object} [result] The object to store the value into, if omitted, a new instance is created and returned.

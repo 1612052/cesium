@@ -432,7 +432,7 @@ import PolylineVisualizer from './PolylineVisualizer.js';
 
     /**
      * A function which creates an array of visualizers used for visualization.
-     * @callback DataSourceDisplay~VisualizersCallback
+     * @callback DataSourceDisplay.VisualizersCallback
      *
      * @param {Scene} scene The scene to create visualizers for.
      * @param {DataSource} dataSource The data source to create visualizers for.

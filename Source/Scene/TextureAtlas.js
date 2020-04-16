@@ -447,7 +447,7 @@ import when from '../ThirdParty/when.js';
 
     /**
      * A function that creates an image.
-     * @callback TextureAtlas~CreateImageCallback
+     * @callback TextureAtlas.CreateImageCallback
      * @param {String} id The identifier of the image to load.
      * @returns {Image|Promise} The image, or a promise that will resolve to an image.
      */

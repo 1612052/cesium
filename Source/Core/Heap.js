@@ -216,7 +216,7 @@ import defined from './defined.js';
 
     /**
      * The comparator to use for the heap.
-     * @callback Heap~ComparatorCallback
+     * @callback Heap.ComparatorCallback
      * @param {*} a An element in the heap.
      * @param {*} b An element in the heap.
      * @returns {Number} If the result of the comparison is less than 0, sort a to a lower index than b, otherwise sort to a higher index.

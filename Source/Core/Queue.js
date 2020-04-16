@@ -111,7 +111,7 @@
 
     /**
      * A function used to compare two items while sorting a queue.
-     * @callback Queue~Comparator
+     * @callback Queue.Comparator
      *
      * @param {*} a An item in the array.
      * @param {*} b An item in the array.

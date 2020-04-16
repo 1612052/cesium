@@ -3,7 +3,7 @@ import defined from '../Core/defined.js';
 import ConstantProperty from './ConstantProperty.js';
 
     /**
-     * @returns {*}
+     * @returns {*} Needed to make the TS compiler happy because `set` is a private method otherwise.
      */
     function createProperty(name, privateName, subscriptionName, configurable, createPropertyCallback) {
         return {

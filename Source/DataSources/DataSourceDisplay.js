@@ -28,7 +28,7 @@ import PolylineVisualizer from './PolylineVisualizer.js';
      * @param {Object} options Object with the following properties:
      * @param {Scene} options.scene The scene in which to display the data.
      * @param {DataSourceCollection} options.dataSourceCollection The data sources to display.
-     * @param {DataSourceDisplay~VisualizersCallback} [options.visualizersCallback=DataSourceDisplay.defaultVisualizersCallback]
+     * @param {DataSourceDisplay.VisualizersCallback} [options.visualizersCallback=DataSourceDisplay.defaultVisualizersCallback]
      *        A function which creates an array of visualizers used for visualization.
      *        If undefined, all standard visualizers are used.
      */
@@ -102,7 +102,7 @@ import PolylineVisualizer from './PolylineVisualizer.js';
      * Gets or sets the default function which creates an array of visualizers used for visualization.
      * By default, this function uses all standard visualizers.
      *
-     * @type {DataSourceDisplay~VisualizersCallback}
+     * @type {DataSourceDisplay.VisualizersCallback}
      */
     DataSourceDisplay.defaultVisualizersCallback = function(scene, entityCluster, dataSource) {
         var entities = dataSource.entities;

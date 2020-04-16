@@ -24,7 +24,7 @@ import EasingFunction from '../Core/EasingFunction.js';
     /**
      * Play this playlist entry
      *
-     * @param {KmlTourFlyTo~DoneCallback} done function which will be called when playback ends
+     * @param {KmlTourFlyTo.DoneCallback} done function which will be called when playback ends
      * @param {Camera} camera Cesium camera
      * @param {Object} [cameraOptions] which will be merged with camera flyTo options. See {@link Camera#flyTo}
      */

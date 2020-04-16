@@ -337,7 +337,7 @@ import ToggleButtonViewModel from '../ToggleButtonViewModel.js';
      * Gets or sets the default date formatter used by new instances.
      *
      * @member
-     * @type {AnimationViewModel~DateFormatter}
+     * @type {AnimationViewModel.DateFormatter}
      */
     AnimationViewModel.defaultDateFormatter = function(date, viewModel) {
         var gregorianDate = JulianDate.toGregorianDate(date);
@@ -357,7 +357,7 @@ import ToggleButtonViewModel from '../ToggleButtonViewModel.js';
      * Gets or sets the default time formatter used by new instances.
      *
      * @member
-     * @type {AnimationViewModel~TimeFormatter}
+     * @type {AnimationViewModel.TimeFormatter}
      */
     AnimationViewModel.defaultTimeFormatter = function(date, viewModel) {
         var gregorianDate = JulianDate.toGregorianDate(date);
@@ -509,7 +509,7 @@ import ToggleButtonViewModel from '../ToggleButtonViewModel.js';
          * Gets or sets the function which formats a date for display.
          * @memberof AnimationViewModel.prototype
          *
-         * @type {AnimationViewModel~DateFormatter}
+         * @type {AnimationViewModel.DateFormatter}
          * @default AnimationViewModel.defaultDateFormatter
          */
         dateFormatter : {
@@ -532,7 +532,7 @@ import ToggleButtonViewModel from '../ToggleButtonViewModel.js';
          * Gets or sets the function which formats a time for display.
          * @memberof AnimationViewModel.prototype
          *
-         * @type {AnimationViewModel~TimeFormatter}
+         * @type {AnimationViewModel.TimeFormatter}
          * @default AnimationViewModel.defaultTimeFormatter
          */
         timeFormatter : {

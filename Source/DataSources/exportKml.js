@@ -234,7 +234,7 @@ import ScaledPositionProperty from './ScaledPositionProperty.js';
          * @param {Object} options An object with the following properties:
          * @param {EntityCollection} options.entities The EntityCollection to export as KML.
          * @param {Ellipsoid} [options.ellipsoid=Ellipsoid.WGS84] The ellipsoid for the output file.
-         * @param {exportKml~ModelCallback} [options.modelCallback] A callback that will be called with a {@link ModelGraphics} instance and should return the URI to use in the KML. Required if a model exists in the entity collection.
+         * @param {exportKml.ModelCallback} [options.modelCallback] A callback that will be called with a {@link ModelGraphics} instance and should return the URI to use in the KML. Required if a model exists in the entity collection.
          * @param {JulianDate} [options.time=entities.computeAvailability().start] The time value to use to get properties that are not time varying in KML.
          * @param {TimeInterval} [options.defaultAvailability=entities.computeAvailability()] The interval that will be sampled if an entity doesn't have an availability.
          * @param {Number} [options.sampleDuration=60] The number of seconds to sample properties that are varying in KML.

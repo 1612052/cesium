@@ -374,7 +374,7 @@ import Texture from '../Renderer/Texture.js';
     /**
      * Gets a function that will update a uniform map to contain values for looking up values in the batch table.
      *
-     * @returns {BatchTable~updateUniformMapCallback} A callback for updating uniform maps.
+     * @returns {BatchTable.updateUniformMapCallback} A callback for updating uniform maps.
      */
     BatchTable.prototype.getUniformMapCallback = function() {
         var that = this;
@@ -490,7 +490,7 @@ import Texture from '../Renderer/Texture.js';
     /**
      * Gets a function that will update a vertex shader to contain functions for looking up values in the batch table.
      *
-     * @returns {BatchTable~updateVertexShaderSourceCallback} A callback for updating a vertex shader source.
+     * @returns {BatchTable.updateVertexShaderSourceCallback} A callback for updating a vertex shader source.
      */
     BatchTable.prototype.getVertexShaderCallback = function() {
         var attributes = this._attributes;

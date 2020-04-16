@@ -16,7 +16,7 @@ import defined from '../Core/defined.js';
     /**
      * Play this playlist entry
      *
-     * @param {KmlTourWait~DoneCallback} done function which will be called when playback ends
+     * @param {KmlTourWait.DoneCallback} done function which will be called when playback ends
      */
     KmlTourWait.prototype.play = function(done) {
         var self = this;

@@ -777,7 +777,7 @@ import PolylineGraphics from './PolylineGraphics.js';
      * @param {Resource|String|Object} data A url, GeoJSON object, or TopoJSON object to be loaded.
      * @param {Object} [options] An object with the following properties:
      * @param {String} [options.sourceUri] Overrides the url to use for resolving relative links.
-     * @param {GeoJsonDataSource~describe} [options.describe=GeoJsonDataSource.defaultDescribeProperty] A function which returns a Property object (or just a string),
+     * @param {GeoJsonDataSource.describe} [options.describe=GeoJsonDataSource.defaultDescribeProperty] A function which returns a Property object (or just a string),
      *                                                                                which converts the properties into an html description.
      * @param {Number} [options.markerSize=GeoJsonDataSource.markerSize] The default size of the map pin created for each point, in pixels.
      * @param {String} [options.markerSymbol=GeoJsonDataSource.markerSymbol] The default symbol of the map pin created for each point.

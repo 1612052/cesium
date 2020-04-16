@@ -443,7 +443,7 @@ import kdbush from '../ThirdParty/kdbush.js';
             }
         },
         /**
-         * Gets the event that will be raised when a new cluster will be displayed. The signature of the event listener is {@link EntityCluster~newClusterCallback}.
+         * Gets the event that will be raised when a new cluster will be displayed. The signature of the event listener is {@link EntityCluster.newClusterCallback}.
          * @memberof EntityCluster.prototype
          * @type {Event}
          */

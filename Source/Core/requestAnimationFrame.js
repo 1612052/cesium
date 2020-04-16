@@ -43,7 +43,7 @@ import getTimestamp from './getTimestamp.js';
      *
      * @exports requestAnimationFrame
      *
-     * @param {requestAnimationFrame~Callback} callback The function to call when the next frame should be drawn.
+     * @param {requestAnimationFrame.Callback} callback The function to call when the next frame should be drawn.
      * @returns {Number} An ID that can be passed to {@link cancelAnimationFrame} to cancel the request.
      *
      *

@@ -225,7 +225,7 @@ import SceneMode from './SceneMode.js';
          * directly in <code>update</code> functions.
          * </p>
          *
-         * @type {FrameState~AfterRenderCallback[]}
+         * @type {FrameState.AfterRenderCallback[]}
          *
          * @example
          * frameState.afterRender.push(function() {

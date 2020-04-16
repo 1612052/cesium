@@ -203,7 +203,7 @@ import JulianDate from './JulianDate.js';
      *
      * @param {TimeInterval} [left] The first instance.
      * @param {TimeInterval} [right] The second instance.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
      * @returns {Boolean} <code>true</code> if the dates are equal; otherwise, <code>false</code>.
      */
     TimeInterval.equals = function(left, right, dataComparer) {
@@ -226,7 +226,7 @@ import JulianDate from './JulianDate.js';
      * @param {TimeInterval} [left] The first instance.
      * @param {TimeInterval} [right] The second instance.
      * @param {Number} epsilon The maximum number of seconds that should separate the two instances.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
      * @returns {Boolean} <code>true</code> if the two dates are within <code>epsilon</code> seconds of each other; otherwise <code>false</code>.
      */
     TimeInterval.equalsEpsilon = function(left, right, epsilon, dataComparer) {
@@ -250,7 +250,7 @@ import JulianDate from './JulianDate.js';
      * @param {TimeInterval} left The first interval.
      * @param {TimeInterval} [right] The second interval.
      * @param {TimeInterval} result An existing instance to use for the result.
-     * @param {TimeInterval~MergeCallback} [mergeCallback] A function which merges the data of the two intervals. If omitted, the data from the left interval will be used.
+     * @param {TimeInterval.MergeCallback} [mergeCallback] A function which merges the data of the two intervals. If omitted, the data from the left interval will be used.
      * @returns {TimeInterval} The modified result parameter.
      */
     TimeInterval.intersect = function(left, right, result, mergeCallback) {
@@ -335,7 +335,7 @@ import JulianDate from './JulianDate.js';
      * <code>true</code> if they are equal, <code>false</code> otherwise.
      *
      * @param {TimeInterval} [right] The right hand side interval.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
      * @returns {Boolean} <code>true</code> if they are equal, <code>false</code> otherwise.
      */
     TimeInterval.prototype.equals = function(right, dataComparer) {
@@ -349,7 +349,7 @@ import JulianDate from './JulianDate.js';
      *
      * @param {TimeInterval} [right] The right hand side interval.
      * @param {Number} epsilon The epsilon to use for equality testing.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
      * @returns {Boolean} <code>true</code> if they are within the provided epsilon, <code>false</code> otherwise.
      */
     TimeInterval.prototype.equalsEpsilon = function(right, epsilon, dataComparer) {

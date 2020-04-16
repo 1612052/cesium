@@ -23,7 +23,7 @@ import Particle from './Particle.js';
      *
      * @param {Object} [options] Object with the following properties:
      * @param {Boolean} [options.show=true] Whether to display the particle system.
-     * @param {ParticleSystem~updateCallback} [options.updateCallback] The callback function to be called each frame to update a particle.
+     * @param {ParticleSystem.updateCallback} [options.updateCallback] The callback function to be called each frame to update a particle.
      * @param {ParticleEmitter} [options.emitter=new CircleEmitter(0.5)] The particle emitter for this system.
      * @param {Matrix4} [options.modelMatrix=Matrix4.IDENTITY] The 4x4 transformation matrix that transforms the particle system from model to world coordinates.
      * @param {Matrix4} [options.emitterModelMatrix=Matrix4.IDENTITY] The 4x4 transformation matrix that transforms the particle system emitter within the particle systems local coordinate system.
@@ -67,7 +67,7 @@ import Particle from './Particle.js';
 
         /**
          * An array of force callbacks. The callback is passed a {@link Particle} and the difference from the last time
-         * @type {ParticleSystem~updateCallback}
+         * @type {ParticleSystem.updateCallback}
          * @default undefined
          */
         this.updateCallback = options.updateCallback;

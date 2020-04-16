@@ -8,7 +8,7 @@ import Event from '../Core/Event.js';
      * @alias CallbackProperty
      * @constructor
      *
-     * @param {CallbackProperty~Callback} callback The function to be called when the property is evaluated.
+     * @param {CallbackProperty.Callback} callback The function to be called when the property is evaluated.
      * @param {Boolean} isConstant <code>true</code> when the callback function returns the same value every time, <code>false</code> if the value will change.
      */
     function CallbackProperty(callback, isConstant) {
@@ -60,7 +60,7 @@ import Event from '../Core/Event.js';
     /**
      * Sets the callback to be used.
      *
-     * @param {CallbackProperty~Callback} callback The function to be called when the property is evaluated.
+     * @param {CallbackProperty.Callback} callback The function to be called when the property is evaluated.
      * @param {Boolean} isConstant <code>true</code> when the callback function returns the same value every time, <code>false</code> if the value will change.
      */
     CallbackProperty.prototype.setCallback = function(callback, isConstant) {

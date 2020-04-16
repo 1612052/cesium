@@ -23,9 +23,9 @@ import when from '../ThirdParty/when.js';
      *
      * @exports createTaskProcessorWorker
      *
-     * @param {createTaskProcessorWorker~WorkerFunction} workerFunction The calculation function,
+     * @param {createTaskProcessorWorker.WorkerFunction} workerFunction The calculation function,
      *        which takes parameters and returns a result.
-     * @returns {createTaskProcessorWorker~TaskProcessorWorkerFunction} A function that adapts the
+     * @returns {createTaskProcessorWorker.TaskProcessorWorkerFunction} A function that adapts the
      *          calculation function to work as a Web Worker onmessage listener with TaskProcessor.
      *
      *

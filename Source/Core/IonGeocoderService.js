@@ -53,7 +53,7 @@ import Resource from './Resource.js';
      *
      * @param {String} query The query to be sent to the geocoder service
      * @param {GeocodeType} [type=GeocodeType.SEARCH] The type of geocode to perform.
-     * @returns {Promise<GeocoderService~Result[]>}
+     * @returns {Promise<GeocoderService.Result[]>}
      */
     IonGeocoderService.prototype.geocode = function (query, geocodeType) {
         return this._pelias.geocode(query, geocodeType);

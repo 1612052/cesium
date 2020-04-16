@@ -77,7 +77,7 @@ import knockout from '../../ThirdParty/knockout.js';
          * Gets or sets the function for converting the world position of the object to the screen space position.
          *
          * @member
-         * @type {SelectionIndicatorViewModel~ComputeScreenSpacePosition}
+         * @type {SelectionIndicatorViewModel.ComputeScreenSpacePosition}
          * @default SceneTransforms.wgs84ToWindowCoordinates
          *
          * @example

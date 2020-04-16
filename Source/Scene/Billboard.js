@@ -1112,7 +1112,7 @@ import VerticalOrigin from './VerticalOrigin.js';
      * </p>
      *
      * @param {String} id The id of the image.  This can be any string that uniquely identifies the image.
-     * @param {Image|Canvas|String|Resource|Billboard~CreateImageCallback} image The image to load.  This parameter
+     * @param {Image|Canvas|String|Resource|Billboard.CreateImageCallback} image The image to load.  This parameter
      *        can either be a loaded Image or Canvas, a URL which will be loaded as an Image automatically,
      *        or a function which will be called to create the image if it hasn't been loaded already.
      * @example

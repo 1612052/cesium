@@ -12,7 +12,7 @@ import Quaternion from './Quaternion.js';
      * @alias IauOrientationAxes
      * @constructor
      *
-     * @param {IauOrientationAxes~ComputeFunction} [computeFunction] The function that computes the {@link IauOrientationParameters} given a {@link JulianDate}.
+     * @param {IauOrientationAxes.ComputeFunction} [computeFunction] The function that computes the {@link IauOrientationParameters} given a {@link JulianDate}.
      *
      * @see Iau2000Orientation
      *

@@ -1296,7 +1296,7 @@ Either specify options.terrainProvider instead or set options.baseLayerPicker to
      * A mixin may add additional properties, functions, or other behavior
      * to the provided viewer instance.
      *
-     * @param {Viewer~ViewerMixin} mixin The Viewer mixin to add to this instance.
+     * @param {Viewer.ViewerMixin} mixin The Viewer mixin to add to this instance.
      * @param {Object} [options] The options object to be passed to the mixin function.
      *
      * @see viewerDragDropMixin

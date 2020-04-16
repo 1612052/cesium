@@ -309,7 +309,7 @@ import when from '../ThirdParty/when.js';
      * the existing index is used.
      *
      * @param {String} id An identifier to detect whether the image already exists in the atlas.
-     * @param {Image|Canvas|String|Resource|Promise|TextureAtlas~CreateImageCallback} image An image or canvas to add to the texture atlas,
+     * @param {Image|Canvas|String|Resource|Promise|TextureAtlas.CreateImageCallback} image An image or canvas to add to the texture atlas,
      *        or a URL to an Image, or a Promise for an image, or a function that creates an image.
      * @returns {Promise.<Number>} A Promise for the image index.
      */

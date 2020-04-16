@@ -97,7 +97,7 @@
     /**
      * Sort the items in the queue in-place.
      *
-     * @param {Queue~Comparator} compareFunction A function that defines the sort order.
+     * @param {Queue.Comparator} compareFunction A function that defines the sort order.
      */
     Queue.prototype.sort = function(compareFunction) {
         if (this._offset > 0) {

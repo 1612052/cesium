@@ -6,7 +6,7 @@ import Check from './Check.js';
      * @exports binarySearch
      * @param {Array} array The sorted array to search.
      * @param {*} itemToFind The item to find in the array.
-     * @param {binarySearch~Comparator} comparator The function to use to compare the item to
+     * @param {binarySearch.Comparator} comparator The function to use to compare the item to
      *        elements in the array.
      * @returns {Number} The index of <code>itemToFind</code> in the array, if it exists.  If <code>itemToFind</code>
      *        does not exist, the return value is a negative number which is the bitwise complement (~)

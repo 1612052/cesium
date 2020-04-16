@@ -12,9 +12,9 @@ import RequestType from './RequestType.js';
      * @exports Request
      * @param {Object} [options] An object with the following properties:
      * @param {String} [options.url] The url to request.
-     * @param {Request~RequestCallback} [options.requestFunction] The function that makes the actual data request.
-     * @param {Request~CancelCallback} [options.cancelFunction] The function that is called when the request is cancelled.
-     * @param {Request~PriorityCallback} [options.priorityFunction] The function that is called to update the request's priority, which occurs once per frame.
+     * @param {Request.RequestCallback} [options.requestFunction] The function that makes the actual data request.
+     * @param {Request.CancelCallback} [options.cancelFunction] The function that is called when the request is cancelled.
+     * @param {Request.PriorityCallback} [options.priorityFunction] The function that is called to update the request's priority, which occurs once per frame.
      * @param {Number} [options.priority=0.0] The initial priority of the request.
      * @param {Boolean} [options.throttle=false] Whether to throttle and prioritize the request. If false, the request will be sent immediately. If true, the request will be throttled and sent based on priority.
      * @param {Boolean} [options.throttleByServer=false] Whether to throttle the request by server.
@@ -36,21 +36,21 @@ import RequestType from './RequestType.js';
         /**
          * The function that makes the actual data request.
          *
-         * @type {Request~RequestCallback}
+         * @type {Request.RequestCallback}
          */
         this.requestFunction = options.requestFunction;
 
         /**
          * The function that is called when the request is cancelled.
          *
-         * @type {Request~CancelCallback}
+         * @type {Request.CancelCallback}
          */
         this.cancelFunction = options.cancelFunction;
 
         /**
          * The function that is called to update the request's priority, which occurs once per frame.
          *
-         * @type {Request~PriorityCallback}
+         * @type {Request.PriorityCallback}
          */
         this.priorityFunction = options.priorityFunction;
 

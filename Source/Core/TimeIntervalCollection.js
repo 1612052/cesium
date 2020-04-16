@@ -129,7 +129,7 @@ import TimeInterval from './TimeInterval.js';
      * <code>true</code> if they are equal, <code>false</code> otherwise.
      *
      * @param {TimeIntervalCollection} [right] The right hand side collection.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
      * @returns {Boolean} <code>true</code> if they are equal, <code>false</code> otherwise.
      */
     TimeIntervalCollection.prototype.equals = function(right, dataComparer) {
@@ -288,7 +288,7 @@ import TimeInterval from './TimeInterval.js';
      * The data in the new interval takes precedence over any existing intervals in the collection.
      *
      * @param {TimeInterval} interval The interval to add.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
      */
     TimeIntervalCollection.prototype.addInterval = function(interval, dataComparer) {
         //>>includeStart('debug', pragmas.debug);
@@ -582,8 +582,8 @@ import TimeInterval from './TimeInterval.js';
      * Creates a new instance that is the intersection of this collection and the provided collection.
      *
      * @param {TimeIntervalCollection} other The collection to intersect with.
-     * @param {TimeInterval~DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
-     * @param {TimeInterval~MergeCallback} [mergeCallback] A function which merges the data of the two intervals. If omitted, the data from the left interval will be used.
+     * @param {TimeInterval.DataComparer} [dataComparer] A function which compares the data of the two intervals.  If omitted, reference equality is used.
+     * @param {TimeInterval.MergeCallback} [mergeCallback] A function which merges the data of the two intervals. If omitted, the data from the left interval will be used.
      * @returns {TimeIntervalCollection} A new TimeIntervalCollection which is the intersection of this collection and the provided collection.
      */
     TimeIntervalCollection.prototype.intersect = function(other, dataComparer, mergeCallback) {

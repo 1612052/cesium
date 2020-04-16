@@ -1,6 +1,7 @@
 import Cartesian3 from '../Core/Cartesian3.js';
 import Check from '../Core/Check.js';
 import Color from '../Core/Color.js';
+import DeveloperError from '../Core/DeveloperError.js';
 import ColorGeometryInstanceAttribute from '../Core/ColorGeometryInstanceAttribute.js';
 import defaultValue from '../Core/defaultValue.js';
 import defined from '../Core/defined.js';
